@@ -1,33 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Merci</title>
-    <link rel="stylesheet" href="/css/fontawesome-all.css">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<main role="main" class="container">
-    <h1 class="mt-5">Merci</h1>
-    <p class="lead">Afin de permettre aux vérifications de sécurité d'avoir lieu, il vous faut autoriser le plugin à accéder aux fichiers télécharger par votre navigateur. Pour ce faire, veuillez suivre ces instructions:</p>
-
-    <h2 class="title">3. Installation</h2>
-    <hr/>
-    <list>
-        <ol type="a">
-            <li class="lead"><p>En haut à droite de chrome, cliquez sur « Plus » (les trois points
-                verticaux) <i class="fas fa-ellipsis-v"></i> .</p></li>
-            <li class="lead"><p>Allez sur « Plus d’Outils » puis « Extensions ».</p></li>
-            <img src="selectExtension.png" class="img-fluid rounded mx-auto d-block">
-            <li class="lead"><p>Sélectionnez détails dans l’extension nommée « Téléchargement et
-                vérification d'intégrité ».</p></li>
-            <img src="instruction2.png" class="img-fluid rounded mx-auto d-block">
-            <li class="lead"><p>Activer l'accès aux URL de fichier.</p></li>
-            <img src="instruction3.png" class="img-fluid rounded mx-auto d-block">
-        </ol>
-    </list>
-</main>
-</body>
-</html>
-
-
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Activer la vérification automatique</title><link rel="stylesheet" href="/css/popup.css"></head><body><main>
+<h1>Activer la vérification automatique</h1>
+<ol><li>Ouvrez <strong>chrome://extensions</strong>.</li><li>Trouvez <strong>Automated Checksum Verification</strong> et ouvrez <strong>Détails</strong>.</li><li>Activez <strong>Autoriser l'accès aux URL de fichier</strong>.</li><li>Rechargez la page de téléchargement de l'éditeur, puis téléchargez votre fichier.</li></ol>
+<p>L'extension lit le fichier téléchargé et compare ses empreintes avec celles de l'éditeur. Aucun fichier n'est envoyé à un serveur.</p>
+<p>Vous pouvez aussi sélectionner un fichier manuellement dans la fenêtre de l'extension. Une empreinte identique confirme l'intégrité par rapport à la valeur fournie ; elle ne garantit pas l'absence de logiciels malveillants ni l'identité de l'éditeur. L'interface de vérification est actuellement en anglais.</p>
+</main></body></html>

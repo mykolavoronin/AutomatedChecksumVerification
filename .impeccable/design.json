@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T16:39:36.237031+00:00",
+  "title": "Design System: Checksum verification",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Accent",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "accent-hover": {
+        "role": "neutral",
+        "displayName": "Accent Hover",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Background",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Text",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Border",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Soft",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "good": {
+        "role": "neutral",
+        "displayName": "Good",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "good-background": {
+        "role": "neutral",
+        "displayName": "Good Background",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "warning": {
+        "role": "neutral",
+        "displayName": "Warning",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "warning-background": {
+        "role": "neutral",
+        "displayName": "Warning Background",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "bad": {
+        "role": "neutral",
+        "displayName": "Bad",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "bad-background": {
+        "role": "neutral",
+        "displayName": "Bad Background",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Focus",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-background": {
+        "role": "neutral",
+        "displayName": "Dark Background",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Dark Surface",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "Dark Text",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Dark Muted",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-border": {
+        "role": "neutral",
+        "displayName": "Dark Border",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "Dark Accent",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-accent-hover": {
+        "role": "neutral",
+        "displayName": "Dark Accent Hover",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-soft": {
+        "role": "neutral",
+        "displayName": "Dark Soft",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-good": {
+        "role": "neutral",
+        "displayName": "Dark Good",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-good-background": {
+        "role": "neutral",
+        "displayName": "Dark Good Background",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-warning": {
+        "role": "neutral",
+        "displayName": "Dark Warning",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-warning-background": {
+        "role": "neutral",
+        "displayName": "Dark Warning Background",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-bad": {
+        "role": "neutral",
+        "displayName": "Dark Bad",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-bad-background": {
+        "role": "neutral",
+        "displayName": "Dark Bad Background",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "glass": {
+        "role": "neutral",
+        "displayName": "Light glass",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "dark-glass": {
+        "role": "neutral",
+        "displayName": "Dark glass",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(49% 0 0)",
+          "oklch(61% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(84% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "title": {
+        "displayName": "Current result",
+        "purpose": "The compact popup current stage or outcome."
+      },
+      "body": {
+        "displayName": "Utility body",
+        "purpose": "Readable operational content and controls."
+      },
+      "label": {
+        "displayName": "Supporting label",
+        "purpose": "Status, field labels, and metadata."
+      },
+      "digest": {
+        "displayName": "Digest evidence",
+        "purpose": "Wrapped exact expected and computed values."
+      }
+    },
+    "shadows": [
+      {
+        "name": "report-shell",
+        "value": "0 16px 70px #0000000a",
+        "purpose": "Soft depth around the wide glass report shell."
+      },
+      {
+        "name": "page-overlay",
+        "value": "0 8px 30px #0002",
+        "purpose": "Separate the page progress card from arbitrary publisher content."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-color",
+        "value": ".15s ease-out",
+        "purpose": "Background and border state changes."
+      },
+      {
+        "name": "press",
+        "value": ".12s ease-out; scale: .96",
+        "purpose": "Eligible button press feedback; disabled under reduced motion."
+      },
+      {
+        "name": "loader",
+        "value": ".8s linear infinite",
+        "purpose": "Circular checking indicator; static under reduced motion."
+      },
+      {
+        "name": "seek",
+        "value": "1.15s cubic-bezier(.4,0,.2,1) infinite",
+        "purpose": "Indeterminate discovery/download meter; static under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "report-tabs",
+        "value": "720px"
+      },
+      {
+        "name": "shared-small-controls",
+        "value": "410px"
+      },
+      {
+        "name": "compact-padding",
+        "value": "380px"
+      }
+    ],
+    "materials": [
+      {
+        "name": "glass-backdrop",
+        "value": "blur(22px) saturate(0%)",
+        "purpose": "Popup, report header/rail, and page progress panel."
+      },
+      {
+        "name": "popup-light-ground",
+        "value": "linear-gradient(150deg,#fafafa,#eeeeee)",
+        "purpose": "Subtle gray ground behind the compact glass surface."
+      },
+      {
+        "name": "popup-dark-ground",
+        "value": "linear-gradient(150deg,#282828,#171717)",
+        "purpose": "Dark appearance compact glass ground."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main report or verification action.",
+      "html": "<button class=\"ds-button ds-primary\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7 3h7l4 4v14H6V3h1Zm7 0v5h4M9 12h6M9 16h6\"/></svg>View file report</button>",
+      "css": ".ds-button{font:600 14px/1.3 system-ui,sans-serif;min-height:38px;border:1px solid transparent;border-radius:10px;padding:8px 12px;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,scale .12s ease-out}.ds-button:focus-visible{outline:3px solid var(--focus,#555);outline-offset:3px}.ds-button:active{scale:.96}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}.ds-button:active{scale:1}}.ds-primary{background:var(--accent,#292929);color:var(--surface,#fff)}.ds-primary:hover{background:var(--accent-hover,#444)}.ds-icon{display:inline-block;width:18px;height:18px;vertical-align:middle;flex-shrink:0;pointer-events:none;margin-right:7px}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Supporting manual action.",
+      "html": "<button class=\"ds-button ds-secondary\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7 3h7l4 4v14H6V3h1Zm7 0v5h4M8.5 14l2 2 4-4\"/></svg>Check a local file</button>",
+      "css": ".ds-button{font:600 14px/1.3 system-ui,sans-serif;min-height:38px;border:1px solid transparent;border-radius:10px;padding:8px 12px;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,scale .12s ease-out}.ds-button:focus-visible{outline:3px solid var(--focus,#555);outline-offset:3px}.ds-button:active{scale:.96}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}.ds-button:active{scale:1}}.ds-secondary{background:var(--surface,#fff);color:var(--accent,#292929);border-color:var(--border,#dedede)}.ds-secondary:hover{background:var(--soft,#f2f2f2);border-color:var(--accent,#292929)}.ds-icon{display:inline-block;width:18px;height:18px;vertical-align:middle;flex-shrink:0;pointer-events:none;margin-right:7px}"
+    },
+    {
+      "name": "Text button",
+      "kind": "button",
+      "description": "Low emphasis supporting action.",
+      "html": "<button class=\"ds-button ds-text\">View all</button>",
+      "css": ".ds-button{font:600 14px/1.3 system-ui,sans-serif;min-height:38px;border:1px solid transparent;border-radius:10px;padding:8px 12px;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,scale .12s ease-out}.ds-button:focus-visible{outline:3px solid var(--focus,#555);outline-offset:3px}.ds-button:active{scale:.96}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}.ds-button:active{scale:1}}.ds-text{background:transparent;color:var(--accent,#292929);padding-inline:5px}.ds-text:hover{background:var(--soft,#f2f2f2)}.ds-icon{display:inline-block;width:18px;height:18px;vertical-align:middle;flex-shrink:0;pointer-events:none;margin-right:7px}"
+    },
+    {
+      "name": "Checksum field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Expected checksum text entry.",
+      "html": "<label class=\"ds-label\" for=\"ds-expected\">Expected checksum</label><textarea id=\"ds-expected\" class=\"ds-field\" rows=\"3\" placeholder=\"Paste a digest\" spellcheck=\"false\"></textarea>",
+      "css": ".ds-label{display:block;font:650 12px system-ui,sans-serif;margin-bottom:6px;color:var(--text,#202020)}.ds-field{font:12px/1.6 ui-monospace,\"Cascadia Code\",monospace;width:100%;min-height:38px;border:1px solid #b8b8b8;border-radius:6px;background:var(--surface,#fff);color:var(--text,#202020);padding:8px 10px;resize:vertical}.ds-field::placeholder{color:var(--muted,#666);opacity:1}.ds-field:focus-visible{outline:3px solid var(--focus,#555);outline-offset:3px}"
+    },
+    {
+      "name": "Report navigation",
+      "kind": "nav",
+      "description": "Soft selected surface in the wide rail.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Report sections\"><button aria-current=\"page\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7 3h7l4 4v14H6V3h1Zm7 0v5h4M9 12h6M9 16h6\"/></svg>Downloads</button><button><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7 3h7l4 4v14H6V3h1Zm7 0v5h4M8.5 14l2 2 4-4\"/></svg>Verify a file</button><button>Settings</button></nav>",
+      "css": ".ds-nav{display:flex;flex-direction:column;gap:6px;width:190px;background:var(--glass,rgba(255,255,255,.82));backdrop-filter:blur(22px) saturate(0%);padding:20px 12px;border-right:1px solid var(--border,#dedede)}.ds-nav button{font:600 13px system-ui,sans-serif;text-align:left;padding:12px;min-height:38px;border:0;border-radius:10px;background:transparent;color:var(--muted,#666);cursor:pointer}.ds-nav button[aria-current=page]{background:var(--soft,#f2f2f2);color:var(--accent,#292929)}.ds-nav button:hover{background:var(--bg,#f7f7f7);color:var(--text,#202020)}.ds-nav button:focus-visible{outline:3px solid var(--focus,#555);outline-offset:3px}.ds-icon{display:inline-block;width:18px;height:18px;vertical-align:middle;flex-shrink:0;pointer-events:none;margin-right:7px}"
+    },
+    {
+      "name": "Verified chip",
+      "kind": "chip",
+      "description": "Outcome label whose words convey meaning in grayscale.",
+      "html": "<span class=\"ds-pill\">Verified</span>",
+      "css": ".ds-pill{display:inline-block;font:650 12px/1.5 system-ui,sans-serif;padding:3px 7px;border-radius:4px;background:var(--good-bg,#f3f3f3);color:var(--good,#292929);white-space:nowrap}"
+    },
+    {
+      "name": "Digest evidence",
+      "kind": "card",
+      "description": "Wrapped expected/computed values and source evidence.",
+      "html": "<section class=\"ds-digest\"><strong>SHA-256</strong><pre>Expected: 19f1348e…\nComputed: 19f1348e…\nSource: publisher.example</pre></section>",
+      "css": ".ds-digest{padding:12px;background:var(--bg,#f7f7f7);border-radius:6px;color:var(--text,#202020)}.ds-digest strong{font:700 12px system-ui,sans-serif}.ds-digest pre{font:12px/1.65 ui-monospace,\"Cascadia Code\",monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:7px 0}"
+    },
+    {
+      "name": "Page progress panel",
+      "kind": "custom",
+      "description": "Persistent translucent white rounded overlay above the publisher page.",
+      "html": "<section class=\"ds-panel\"><header><h2><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"m12 3 8 3v6c0 4-4 7-8 9-4-2-8-5-8-9V6l8-3Zm-4 9 3 3 5-6\"/></svg>Checksum matches</h2><button aria-label=\"Dismiss download panel\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"m6 6 12 12M18 6 6 18\"/></svg></button></header><p class=\"ds-file\">download.zip</p><p>Integrity verified. A checksum match is not a malware scan.</p><button><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7 3h7l4 4v14H6V3h1Zm7 0v5h4M9 12h6M9 16h6\"/></svg>View report</button></section>",
+      "css": ".ds-panel{font:13px/1.5 -apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;color:#202020;background:rgba(255,255,255,.94);backdrop-filter:blur(22px) saturate(0%);border:1px solid #d8d8d8;border-radius:18px;box-shadow:0 8px 30px #0002;padding:18px;max-width:340px}.ds-panel header{display:flex;gap:12px;align-items:start}.ds-panel h2{font-size:15px;line-height:1.4;letter-spacing:-.2px;margin:0;flex:1}.ds-panel p{margin:9px 0;color:#666;overflow-wrap:anywhere}.ds-panel .ds-file{font-weight:500;color:#202020}.ds-panel button{font:inherit;cursor:pointer;border:1px solid #ddd;border-radius:7px;background:#f5f5f5;color:#222;padding:7px 11px;min-height:34px}.ds-panel button:hover{background:#e9e9e9}.ds-panel button:focus-visible{outline:2px solid #202020;outline-offset:3px}.ds-panel header button{padding:0 8px;min-width:32px;background:transparent;font-size:19px}.ds-icon{display:inline-block;width:18px;height:18px;vertical-align:middle;flex-shrink:0;pointer-events:none;margin-right:7px}.ds-panel .ds-icon{width:17px;height:17px}.ds-panel header button .ds-icon{margin:0}"
+    },
+    {
+      "name": "Icon-only power button",
+      "kind": "button",
+      "description": "Circular control with an explicit accessible name and tooltip.",
+      "html": "<button class=\"ds-icon-button\" type=\"button\" aria-label=\"Pause automatic checking\" title=\"Pause automatic checking\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M12 3v9M6.3 5.8a8 8 0 1 0 11.4 0\"/></svg></button>",
+      "css": ".ds-icon{display:inline-block;width:18px;height:18px;vertical-align:middle;flex-shrink:0;pointer-events:none;margin-right:7px}.ds-icon-button{display:inline-flex;align-items:center;justify-content:center;width:38px;min-width:38px;height:38px;padding:9px;border-radius:50%;border:1px solid var(--border,#dedede);background:var(--soft,#f2f2f2);color:var(--text,#202020);cursor:pointer;transition:background-color .15s ease-out,scale .12s ease-out}.ds-icon-button .ds-icon{margin:0}.ds-icon-button:hover{background:var(--soft,#f2f2f2);border-color:var(--accent,#292929)}.ds-icon-button:focus-visible{outline:3px solid var(--focus,#555);outline-offset:3px}.ds-icon-button:active{scale:.96}@media(prefers-reduced-motion:reduce){.ds-icon-button{transition:none}.ds-icon-button:active{scale:1}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Rounded monochrome glass utility",
+    "overview": "The interface helps someone recognize the current check or result in seconds, with exact evidence one action away. Familiar controls, explicit states, and readable evidence take priority over decoration. The automatic path leads; configuration is available through progressive disclosure.\n\nThe user prescribed a compact popup and separate full report, chose direct implementation and browser testing, and subsequently confirmed white, black, and gray minimalism with an automatic, no-configuration feeling, rounded glass surfaces, and abundant functional icons. This replaces the earlier teal and semantic-color direction while preserving explicit outcome distinctions. The concept seed is unrecorded; no generated concept image or image approval is claimed. This record derives from popup.html, report.html, css/popup.css, scripts/compact.js, scripts/popup.js, scripts/page-panel.js, and scripts/ui-icons.js.",
+    "keyCharacteristics": [
+      "Rounded white, black, and gray glass surfaces and functional SVG icons.",
+      "Outcomes expressed in plain language rather than semantic hues.",
+      "A compact current check, a full evidence report, and a persistent page progress panel.",
+      "Local verification with keyboard focus and reduced-motion support."
+    ],
+    "rules": [
+      {
+        "name": "The Explicit Outcome Rule",
+        "body": "Never present a found expected digest as verified file integrity or a checksum match as a malware verdict.",
+        "section": "colors"
+      },
+      {
+        "name": "The Contextual Depth Rule",
+        "body": "Use soft depth on the report shell and page overlay, with quiet tonal grouping inside.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** make the current file, real stage or result, available source identity, and report action easy to find.",
+      "**Do** keep automatic checking primary and disclose configuration afterward.",
+      "**Do** preserve keyboard focus, reduced motion, and readable supporting text.",
+      "**Do** give every icon-only action an explicit accessible label.",
+      "**Do** wrap full filenames and digest evidence; truncate only compact recent-list names."
+    ],
+    "donts": [
+      "**Don't** add colored status accents to the confirmed monochrome world.",
+      "**Don't** describe expected checksums as verified file integrity before comparison.",
+      "**Don't** display fabricated percentages during download or discovery.",
+      "**Don't** collapse unknown, weak, permission-required, and mismatched results into one failure state.",
+      "**Don't** present a checksum match as proof that a file is malware-free."
+    ]
+  }
+}

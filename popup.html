@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checksum verification</title><link rel="stylesheet" href="css/popup.css"></head>
+<body class="compact-shell">
+<header class="compact-header"><svg class="compact-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 4 6v6c0 4 4 7 8 9 4-2 8-5 8-9V6l-8-3Z"/><path d="m8 12 3 3 5-6"/></svg><div><h1>Checksum verification</h1><p>Checked on this device.</p></div><button id="compact-toggle" class="secondary" type="button" aria-pressed="true">On</button></header>
+<main class="compact-main">
+<section id="compact-state" class="compact-state" role="status" aria-live="polite" aria-busy="false" data-state="ready">
+  <div class="compact-state-top"><span id="compact-loader" class="loader" aria-hidden="true" hidden></span><span id="compact-state-label" class="compact-label">Ready</span></div>
+  <h2 id="compact-title">Download a file. We’ll check it.</h2><p id="compact-file" hidden></p><p id="compact-description">We find the publisher’s checksum and compare it with the file saved on your device.</p>
+  <div id="compact-progress" class="meter-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Checksum verification progress" hidden><span class="meter-bar"></span></div>
+  <ol id="compact-steps" class="compact-steps" aria-label="Verification stages" hidden><li data-step="download">Download</li><li data-step="find">Find checksum</li><li data-step="verify">Verify file</li></ol>
+  <p id="compact-source" class="hint" hidden></p>
+  <div class="actions"><button id="compact-details" type="button">Open full report</button><button id="compact-dismiss" class="text-button" type="button" hidden>Dismiss</button></div>
+</section>
+<div id="compact-permission" class="compact-permission" hidden><strong>One-time Chrome permission needed</strong><p>Enable local file access so completed downloads can be verified automatically.</p><button id="compact-permission-button" class="secondary" type="button">Enable file access</button></div>
+<section class="compact-recent" aria-labelledby="compact-recent-title"><div class="section-heading"><h2 id="compact-recent-title">Recent checks</h2><button id="compact-all" class="text-button" type="button">View all</button></div><div id="compact-history"><p class="hint">Your downloads will appear here.</p></div></section>
+<div class="compact-tools"><button id="compact-manual" class="secondary" type="button">Check a local file</button><button id="compact-files" class="text-button" type="button">Explore page files</button></div>
+<details class="compact-options"><summary>More options</summary><div class="compact-mode"><div class="mode-switch" role="group" aria-label="Interface mode"><button id="compact-basic" class="secondary" type="button" aria-pressed="true">Basic</button><button id="compact-advanced" class="secondary" type="button" aria-pressed="false">Advanced</button></div><button id="compact-settings" class="text-button" type="button">Settings</button></div></details>
+<p id="compact-error" role="alert" hidden></p>
+</main><footer class="compact-footer"><span id="compact-access">Checking protection…</span><p>A match confirms integrity. It does not prove a file is malware-free.</p></footer>
+<script src="scripts/core.js"></script><script src="scripts/ui-icons.js"></script><script src="scripts/compact.js"></script>
+</body></html>

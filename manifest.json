@@ -1,19 +1,16 @@
-
 {
-    "name": "__MSG_extName__",
-    "version": "0.3",
-    "manifest_version": 2,
-    "description": "__MSG_extDesc__",
-    "icons": {"16": "icons/icon16.png", "128": "icons/icon128.png"},
-    "background": {"persistent": false, "scripts": ["scripts/md5.js", "scripts/background.js"]},
-    "content_scripts": [
-        {
-          "matches": ["http://*/*", "https://*/*", "file://*"],
-          "js": ["scripts/content.js"],
-          "css": ["css/style.css", "css/fontawesome-all.css"]
-        }
-      ],
-    "default_locale": "en",
-    "permissions": ["alarms", "downloads", "tabs", "downloads.open", "http://*/*", "https://*/*", "file://*"], 
-    "web_accessible_resources": ["css/*", "scripts/*", "webfonts/*", "icons/*"]
+  "name": "__MSG_extName__",
+  "version": "1.4.0",
+  "manifest_version": 3,
+  "minimum_chrome_version": "120",
+  "description": "__MSG_extDesc__",
+  "default_locale": "en",
+  "icons": { "16": "icons/icon16.png", "128": "icons/icon128.png" },
+  "background": { "service_worker": "scripts/background.js" },
+  "action": { "default_title": "Checksum verification", "default_popup": "popup.html" },
+  "options_ui": { "page": "report.html", "open_in_tab": true },
+  "permissions": ["downloads", "storage", "offscreen", "alarms", "notifications"],
+  "host_permissions": ["http://*/*", "https://*/*", "file:///*"],
+  "content_scripts": [{ "matches": ["http://*/*", "https://*/*"], "js": ["scripts/core.js", "scripts/ui-icons.js", "scripts/page-panel.js", "scripts/content.js"], "run_at": "document_idle" }],
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'" }
 }

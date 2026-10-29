@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-mode="basic">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Verification report</title><link rel="stylesheet" href="css/popup.css"></head>
+<body class="report-shell">
+  <header class="app-header"><svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 4 6v6c0 4 4 7 8 9 4-2 8-5 8-9V6l-8-3Z"/><path d="m8 12 3 3 5-6"/></svg><div><h1>Verification report</h1><p>Download evidence, sources, and protection settings.</p></div><button id="protection-toggle" class="protection-toggle" type="button" aria-pressed="true">Protection on</button></header>
+  <div class="report-workspace"><aside class="report-sidebar"><nav class="tabs" role="tablist" aria-label="Extension sections">
+    <button id="tab-downloads" type="button" role="tab" aria-controls="panel-downloads" aria-selected="true" data-panel="downloads">Downloads <span id="download-count" class="count">0</span></button>
+    <button id="tab-files" type="button" role="tab" aria-controls="panel-files" aria-selected="false" tabindex="-1" data-panel="files" data-advanced>Page files <span id="file-count" class="count">0</span></button>
+    <button id="tab-verify" type="button" role="tab" aria-controls="panel-verify" aria-selected="false" tabindex="-1" data-panel="verify">Verify a file</button>
+    <button id="tab-settings" type="button" role="tab" aria-controls="panel-settings" aria-selected="false" tabindex="-1" data-panel="settings">Settings</button>
+  </nav>
+  <details class="report-options"><summary>More options</summary><div class="mode-bar"><p id="mode-description">Automatic checks, clear results.</p><div class="mode-switch" role="group" aria-label="Interface mode"><button id="mode-basic" class="secondary" type="button" aria-pressed="true">Basic</button><button id="mode-advanced" class="secondary" type="button" aria-pressed="false">Advanced</button></div></div></details></aside>
+  <main>
+  <section id="verification-activity" class="verification-activity" role="status" aria-live="polite" aria-busy="false" hidden><span class="loader" aria-hidden="true"></span><div><strong id="activity-title">Checking your download…</strong><p id="activity-detail"></p><div id="activity-progress" class="meter-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Checksum verification progress" hidden><span class="meter-bar"></span></div><ol id="activity-steps" class="compact-steps" aria-label="Verification stages"><li data-step="download">Download</li><li data-step="find">Find checksum</li><li data-step="verify">Verify file</li></ol></div></section>
+  <section id="result-popup" class="result-popup" role="status" aria-live="polite" aria-labelledby="result-title" hidden><div class="result-heading"><h2 id="result-title"></h2><button id="dismiss-result" type="button" class="text-button" aria-label="Dismiss verification result">Dismiss</button></div><p id="result-file"></p><p id="result-description"></p><button id="view-result" type="button" class="secondary">View check details</button></section>
+  <div id="setup" class="setup" hidden><div><strong>Enable automatic file access</strong><p>Chrome needs this permission once to read completed downloads.</p></div><button id="open-permissions" class="secondary" type="button">Open Chrome settings</button></div>
+
+    <section id="panel-downloads" role="tabpanel" aria-labelledby="tab-downloads">
+      <div class="section-heading"><div><h2>Downloads</h2><p id="protection-summary" class="hint">Loading protection settings…</p></div><button id="clear" class="text-button" type="button">Clear history</button></div>
+      <div class="toolbar" data-advanced><input id="search" type="search" aria-label="Search downloads" placeholder="Find a download…"><select id="filter" aria-label="Filter downloads"><option value="all">All downloads</option><option value="attention">Needs attention</option><option value="held">Paused</option><option value="match">Verified</option></select></div>
+      <div id="history"></div>
+    </section>
+    <section id="panel-files" role="tabpanel" aria-labelledby="tab-files" hidden>
+      <div class="section-heading"><div><h2>Files on this page</h2><p id="page-source" class="hint">Looking for download links…</p></div><button id="rescan" class="secondary" type="button">Scan again</button></div>
+      <p class="hint">Includes hidden links, HTML attributes, embedded data, and files identified by checksum links. Only checksum text is fetched automatically; installers are downloaded when you choose.</p>
+      <div id="page-files"></div>
+    </section>
+    <section id="panel-verify" role="tabpanel" aria-labelledby="tab-verify" hidden>
+      <div class="section-heading"><div><h2>Verify a local file</h2><p class="hint">Use this when a publisher’s download cannot be checked automatically.</p></div></div>
+      <label for="file">Downloaded file</label><input id="file" type="file">
+      <label for="checksum-url">Checksum link <span class="optional">optional</span></label><div class="input-action"><input id="checksum-url" type="url" placeholder="https://publisher.com/file.exe.sha256"><button id="load-checksum" class="secondary" type="button">Load checksum</button></div>
+      <label for="expected">Expected checksum or checksum list</label><textarea id="expected" rows="4" placeholder="Paste a digest, GNU/BSD checksum list, or SRI value" spellcheck="false"></textarea>
+      <div class="field-row" data-advanced><div><label for="algorithm">Algorithm for a bare digest</label><select id="algorithm"></select></div><p class="hint">Named algorithms are recognized automatically.</p></div>
+      <p class="hint">No expected checksum? We can still calculate SHA-256. Keep this window open while verifying.</p>
+      <div class="actions"><button id="verify" type="button">Verify locally</button><button id="cancel" class="secondary" type="button" hidden>Cancel verification</button></div>
+      <div id="manual-result" role="status" aria-live="polite"></div>
+    </section>
+    <section id="panel-settings" role="tabpanel" aria-labelledby="tab-settings" hidden>
+      <div class="section-heading"><div><h2>Protection settings</h2><p class="hint">Saved on this device and kept across browser restarts.</p></div></div>
+      <form id="settings-form">
+        <fieldset><legend>Download blocking</legend><label for="block-mode">When a download starts</label><select id="block-mode" name="blockMode"><option value="dangerous">Block Chrome-flagged threats</option><option value="require-checksum">Pause until a strong checksum is found</option><option value="hold-all">Ask before every download</option><option value="off">Monitor only</option></select><p id="mode-help" class="hint"></p>
+          <p class="fine-print">Pausing and cancellation act after Chrome starts the download; some bytes may arrive first. Integrity can only be verified after the complete file is saved. These rules do not quarantine files or block execution.</p>
+          <div data-advanced><label for="blocked-hosts">Blocked download hosts</label><textarea id="blocked-hosts" rows="2" spellcheck="false" placeholder="untrusted.example.com"></textarea><p class="hint">One exact hostname per line. These hosts stay blocked in every blocking mode while protection is on.</p></div>
+        </fieldset>
+        <fieldset data-advanced><legend>Automatic discovery</legend>
+          <label class="setting"><input id="setting-linked" name="linkedPages" type="checkbox"><span>Follow checksum links<small>Read checksum lists and load interactive checksum subpages.</small></span></label>
+          <label class="setting"><input id="setting-cross" name="crossOriginChecksums" type="checkbox"><span>Read checksums from download CDNs<small>Allow public HTTPS checksum hosts such as download.jetbrains.com.</small></span></label>
+          <label class="setting"><input id="setting-guess" name="guessSidecars" type="checkbox"><span>Look for .sha256 and .sha512 files<small>Try the actual download URL’s sidecars, even if no link is visible.</small></span></label>
+          <label class="setting"><input id="setting-reveal" name="revealChecksums" type="checkbox"><span>Reveal hidden checksum panels<small>Click clearly labeled checksum controls. Form and unrelated actions are skipped.</small></span></label>
+        </fieldset>
+        <fieldset><legend>Display and privacy</legend>
+          <label class="setting"><input id="setting-download-panels" name="downloadPanels" type="checkbox"><span>Small download panels<small>Keep progress and the result on the download page until dismissed. Checking continues when panels are off.</small></span></label>
+          <label class="setting"><input id="setting-notifications" name="notifications" type="checkbox"><span>Notify when a check finishes<small>Show verified, mismatch, or couldn’t-verify results, plus blocking and approval notices.</small></span></label>
+          <label class="setting"><input id="setting-result-popups" name="resultPopups" type="checkbox"><span>Open the result popup automatically<small>Show the extension’s result when checking finishes. Browser policy may prevent opening it.</small></span></label>
+          <div class="field-row"><div><label for="theme">Appearance</label><select id="theme" name="theme"><option value="system">Use system setting</option><option value="light">Light</option><option value="dark">Dark</option></select></div><div data-advanced><label for="history-limit">Session history</label><select id="history-limit" name="historyLimit"><option value="25">25 downloads</option><option value="50">50 downloads</option><option value="100">100 downloads</option></select></div></div>
+          <p class="hint">Download history clears when the browser session ends. Active and paused downloads remain until resolved. Files are never uploaded.</p>
+        </fieldset>
+        <div class="settings-save actions"><button type="submit" id="save-settings">Save settings</button><button id="reset-settings" class="text-button" type="button">Restore defaults</button><span id="settings-status" role="status" class="hint"></span></div>
+      </form>
+    </section>
+    <p id="error" role="alert" hidden></p><p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+  </main></div>
+  <footer><span id="access">Checking file access…</span><details><summary>What a checksum can tell you</summary><p>A match confirms integrity against the publisher’s value. It does not authenticate the publisher or prove that a file is malware-free. Security warnings combine Chrome’s download verdict with local risk indicators.</p></details></footer>
+  <script src="scripts/core.js"></script><script src="scripts/ui-icons.js"></script><script src="scripts/popup.js"></script>
+</body></html>
+

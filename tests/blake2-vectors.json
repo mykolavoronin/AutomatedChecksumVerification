@@ -1,0 +1,45 @@
+{
+  "provenance": "Python 3.14 hashlib BLAKE2 parameterized digest_size; empty, abc, and 1 MiB + 17 bytes of 0xa5",
+  "vectors": {
+    "blake2b128": {
+      "empty": "cae66941d9efbd404e4d88758ea67670",
+      "abc": "cf4ab791c62b8d2b2109c90275287816",
+      "chunk": "a84a52ef6c499bed2ce0b10897587d15"
+    },
+    "blake2b160": {
+      "empty": "3345524abf6bbe1809449224b5972c41790b6cf2",
+      "abc": "384264f676f39536840523f284921cdc68b6846b",
+      "chunk": "e52a77c568b6768916b7a1a3e80f0dfe5ce353b1"
+    },
+    "blake2b224": {
+      "empty": "836cc68931c2e4e3e838602eca1902591d216837bafddfe6f0c8cb07",
+      "abc": "9bd237b02a29e43bdd6738afa5b53ff0eee178d6210b618e4511aec8",
+      "chunk": "61d4fd06d243df63f8078045dea5846c7bde89ca7b59e5836ab84d70"
+    },
+    "blake2b256": {
+      "empty": "0e5751c026e543b2e8ab2eb06099daa1d1e5df47778f7787faab45cdf12fe3a8",
+      "abc": "bddd813c634239723171ef3fee98579b94964e3bb1cb3e427262c8c068d52319",
+      "chunk": "f29d2da677355394485d710de25e180bab633984eb7e32cd5860731d0a82ea4b"
+    },
+    "blake2b384": {
+      "empty": "b32811423377f52d7862286ee1a72ee540524380fda1724a6f25d7978c6fd3244a6caf0498812673c5e05ef583825100",
+      "abc": "6f56a82c8e7ef526dfe182eb5212f7db9df1317e57815dbda46083fc30f54ee6c66ba83be64b302d7cba6ce15bb556f4",
+      "chunk": "4de42fd0b35b049fd3e7e31bf844da76b5e3836298c98ab9170cb544997b2b7bae57d103c62be5a127e9eb35c4e7d16c"
+    },
+    "blake2s128": {
+      "empty": "64550d6ffe2c0a01a14aba1eade0200c",
+      "abc": "aa4938119b1dc7b87cbad0ffd200d0ae",
+      "chunk": "20d5bcde46111ffec43a3a100fd0935f"
+    },
+    "blake2s160": {
+      "empty": "354c9c33f735962418bdacb9479873429c34916f",
+      "abc": "5ae3b99be29b01834c3b508521ede60438f8de17",
+      "chunk": "bf1004d3f37c381f6ff1da069f37ac7a2d82b89f"
+    },
+    "blake2s224": {
+      "empty": "1fa1291e65248b37b3433475b2a0dd63d54a11ecc4e3e034e7bc1ef4",
+      "abc": "0b033fc226df7abde29f67a05d3dc62cf271ef3dfea4d387407fbd55",
+      "chunk": "0fda2871ee95cd97607e4a900016c48d4746ab54a4bc7b6e750fdd9a"
+    }
+  }
+}

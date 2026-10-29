@@ -1,30 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Thanks</title>
-    <link rel="stylesheet" href="/css/fontawesome-all.css">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<main role="main" class="container">
-    <h1 class="mt-5">Thank you</h1>
-    <p class="lead">In order for the verification to take place, you must allow the plugin to access the downloaded files through your browser. To do so, please follow these instructions:</p>
-    <h2 class="title">Finish install</h2>
-    <hr/>
-    <list>
-        <ol type="a">
-            <li class="lead"><p>In th top right, click on « more » (three verticla dots) <i class="fas fa-ellipsis-v"></i> .</p></li>
-            <li class="lead"><p>Go to « More tools » then, « Extensions ».</p></li>
-            <img src="selectExtension.png" class="img-fluid rounded mx-auto d-block">
-            <li class="lead"><p>click on details for the extension named « Download and Verify Checksum ».</p></li>
-            <img src="instruction2.png" class="img-fluid rounded mx-auto d-block">
-            <li class="lead"><p>Allow access to file URLs.</p></li>
-            <img src="instruction3.png" class="img-fluid rounded mx-auto d-block">
-        </ol>
-    </list>
-</main>
-</body>
-</html>
-
-
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Enable automatic verification</title><link rel="stylesheet" href="/css/popup.css"></head><body><main>
+<h1>Enable automatic checksum verification</h1>
+<ol><li>Open <strong>chrome://extensions</strong>.</li><li>Find <strong>Automated Checksum Verification</strong> and open <strong>Details</strong>.</li><li>Enable <strong>Allow access to file URLs</strong>.</li><li>Reload the publisher's download page, then download your file.</li></ol>
+<p>The extension reads the completed local download and compares its checksums with the publisher's values. Files are never uploaded.</p>
+<p>You can also open the extension popup and choose a file manually. A checksum match verifies integrity against a supplied digest; it does not prove a file is safe or authenticate its publisher.</p>
+</main></body></html>
